@@ -64,29 +64,29 @@ the ai extracts these fields from referral documents:
 ## screenshots
 
 1. referral parsing view
-<img width="1512" height="950" alt="image" src="https://github.com/user-attachments/assets/8b83f4e4-62d9-48f4-9395-ed799c932ba5" />
+   <img width="1512" height="950" alt="image" src="https://github.com/user-attachments/assets/8b83f4e4-62d9-48f4-9395-ed799c932ba5" />
 
 2. parsed referral with analysis & next steps
-<img width="1512" height="950" alt="image" src="https://github.com/user-attachments/assets/867fb495-60b0-40fa-92f4-59f16d57d768" />
+   <img width="1512" height="950" alt="image" src="https://github.com/user-attachments/assets/867fb495-60b0-40fa-92f4-59f16d57d768" />
 
 3. orders table with status management
-<img width="1512" height="950" alt="image" src="https://github.com/user-attachments/assets/b8f59032-3c25-4514-9e5a-aec710a9e453" />
+   <img width="1512" height="950" alt="image" src="https://github.com/user-attachments/assets/b8f59032-3c25-4514-9e5a-aec710a9e453" />
 
 4. order detail modal
-<img width="1512" height="950" alt="image" src="https://github.com/user-attachments/assets/b24b1743-94e1-41a0-933e-e50910cfcc27" />
+   <img width="1512" height="950" alt="image" src="https://github.com/user-attachments/assets/b24b1743-94e1-41a0-933e-e50910cfcc27" />
 
 ## setup instructions
 
 ### backend
 
 1. cd into the `backend` folder
-2. create a virtual environment: `python -m venv venv`
+2. create a virtual environment: `uv venv .venv`
 3. activate the virtual environment:
-   - on mac/linux: `source venv/bin/activate`
-   - on windows: `venv\Scripts\activate`
-4. install dependencies: `pip install -r requirements.txt`
+   - on mac/linux: `source .venv/bin/activate`
+   - on windows: `.venv\Scripts\activate`
+4. install dependencies: `uv pip install -r requirements.txt`
 5. copy the `.env.example` file to `.env` and add your gemini api key
-6. run the backend server: `python main.py`
+6. run the backend server: `uv run main.py`
 7. the backend api will be running at `http://0.0.0.0:8000`
 
 ### frontend

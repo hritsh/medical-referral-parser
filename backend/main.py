@@ -2,10 +2,12 @@
 Medical Referral Intelligence Platform - FastAPI Backend
 """
 
+import os
 from fastapi import FastAPI, HTTPException, UploadFile, File, Form
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Optional, List, Any
+from dotenv import load_dotenv
 import uvicorn
 import io
 
@@ -14,17 +16,24 @@ from pypdf import PdfReader
 from db import init_db, seed_data, get_all_referrals, get_referral_by_id, save_referral, update_referral_status
 from gemini import parse_referral_with_gemini
 
+load_dotenv()
+
+ALLOWED_ORIGINS_RAW = os.getenv("ALLOWED_ORIGINS", "http://localhost:5173")
+ALLOWED_ORIGINS = [origin.strip()
+                   for origin in ALLOWED_ORIGINS_RAW.split(",") if origin.strip()]
+if not ALLOWED_ORIGINS:
+    ALLOWED_ORIGINS = ["*"]
+
+
 # Initialize FastAPI app
 app = FastAPI(
-    title="Verse Medical Referral Intelligence Platform",
+    title=" Medical Referral Parser & Tracker",
     description="AI-powered medical referral parsing and management system",
     version="1.0.0"
 )
-
-# Enable CORS for frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # In production, specify exact origins
+    allow_origins=ALLOWED_ORIGINS,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
