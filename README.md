@@ -64,13 +64,16 @@ the ai extracts these fields from referral documents:
 ## screenshots
 
 1. referral parsing view
-   <!-- add screenshot here -->
+<img width="1512" height="950" alt="image" src="https://github.com/user-attachments/assets/8b83f4e4-62d9-48f4-9395-ed799c932ba5" />
 
-2. orders table with status management
-   <!-- add screenshot here -->
+2. parsed referral with analysis & next steps
+<img width="1512" height="950" alt="image" src="https://github.com/user-attachments/assets/867fb495-60b0-40fa-92f4-59f16d57d768" />
 
-3. order detail modal
-   <!-- add screenshot here -->
+3. orders table with status management
+<img width="1512" height="950" alt="image" src="https://github.com/user-attachments/assets/b8f59032-3c25-4514-9e5a-aec710a9e453" />
+
+4. order detail modal
+<img width="1512" height="950" alt="image" src="https://github.com/user-attachments/assets/b24b1743-94e1-41a0-933e-e50910cfcc27" />
 
 ## setup instructions
 
